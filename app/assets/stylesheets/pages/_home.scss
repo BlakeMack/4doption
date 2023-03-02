@@ -4,7 +4,7 @@
   height: 700px;
   background-size: cover;
   position: center;
-  background-position: center;
+  background-position: right;
   min-width: 100%;
   display: flex;
   align-items: center;
@@ -32,7 +32,7 @@
 .title p {
   font-size: 30px;
   margin: 0px;
-  color: #222934;
+  color: aliceblue;
 }
 
 .title a {
@@ -62,7 +62,6 @@
 
 
 .landing-page-card {
-  width: 280px;
   border-radius: 10px;
   color: #222934;
 }
@@ -77,9 +76,9 @@
   text-decoration: none;
 }
 
-.landing-page-card .card-body {
-  height: 138px;
-}
+// .landing-page-card .card-body {
+//   height: 138px;
+// }
 
 .banner-homepage .btn {
   margin-right: 20px;
@@ -116,7 +115,6 @@
   margin-left: 11px;
   font-size: large;
   // border-left: 1px solid;
-
 }
 
 .search-btn input {
@@ -151,8 +149,10 @@ h2, .h2 {
 
 .set-browse-all-pets-width {
   width: 20%;
-
+  display: flex;
+  justify-content: center;
 }
+
 
 .increase-btn-font {
   font-size: large;
