@@ -34,13 +34,16 @@
   </head>
 
   <body class="d-flex flex-column min-vh-100">
-    <div class="main-container">
-      <%= render "shared/navbar" %>
-      <%= render "shared/flashes" %>
-      <article class="flex-grow-1 min-height">
-        <%= yield %>
-      </article>
+    <div class="site-wrapper">
+      <div class="main-container">
+        <%= render "shared/navbar" %>
+        <%= render "shared/flashes" %>
+        <article class="flex-grow-1 min-height">
+          <%= yield %>
+        </article>
+      </div>
+      <%= render "shared/footer" %>
     </div>
-    <%= render "shared/footer" %>
+
   </body>
 </html>
