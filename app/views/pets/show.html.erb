@@ -113,7 +113,7 @@
             <h3> <%= "You currently have #{@pet.applications.count} application(s) for your pet" %></h3>
             <ul class="list-group mb-3">
               <% @pet.applications.each do |application| %>
-                <li class="list-group-item">
+                <li class="list-group-item application-form-center">
                 <% if application.validated %>
                   <% if application.approved %>
                     <h3> Your approved applications</h3>

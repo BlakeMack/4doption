@@ -350,10 +350,6 @@
   margin-left: 6px;
 }
 
-.change-width {
-  width: 25%
-}
-
 .review-btn-green {
   background-color: #9DE18C !important;
 }
@@ -365,4 +361,10 @@
 .center-btns {
   display: flex;
   justify-content: center;
+}
+
+@media screen and (max-width: 650px) {
+  .center-btns {
+    flex-direction: column;
+  }
 }
