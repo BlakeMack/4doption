@@ -46,9 +46,7 @@
 
     <div class="adoption-details">
       <div class="price-button">
-        <span>
           <button>Adoption Fee: £<%= @pet.adoption_fee? ? @pet.adoption_fee : 0 %></button>
-        </span>
       </div>
       <div class="profile-card">
         <div class="card-trip-infos">
@@ -62,7 +60,7 @@
       </div>
       <br>
       <p><strong> About <%= @pet.user.name %></strong></p>
-      <p><%= @pet.user.description  %></p>
+      <p class="pet-user-description"><%= @pet.user.description  %></p>
       <% if @pet.applications.where(user: current_user).count == 0 && current_user.can_edit_pet?(@pet) == false %>
         <div class="apply-button">
           <a href= "#new_application"> <button class="delete-fav-btn button-1 button-1-hover" role="button">Apply to Adopt</button></a>

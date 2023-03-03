@@ -13,12 +13,16 @@
   padding: 20px;
   text-decoration: none;
   flex-direction: row;
-  overflow-y: scroll;
   // flex: 2 2 auto;
   align-items: stretch;
   box-shadow: 0 0 15px #9BBDF9;
-  width: calc(60% - 40px);
   position: relative;
+}
+
+.card-trip-infos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .pet-details-container {
@@ -35,8 +39,6 @@
   display: flex;
   justify-content: center;
   padding: 30px;
-  overflow-y: scroll;
-  width: calc(40% - 40px);
   box-shadow: 0 0 15px #9BBDF9;
   flex-direction: column;
 }
@@ -46,12 +48,9 @@
   color: #5E6771;
   margin: 20px;
   border-radius: 30px;
-  display: flex;
   padding: 30px;
-  width: calc(40% - 40px);
   height: 500px;
   overflow-y: scroll;
-  flex: 1 1 0;
   align-items: stretch;
 }
 
@@ -67,6 +66,8 @@
   margin-left: 20px;
   margin-top: 20px;
   line-height: 0.5;
+  overflow-y: scroll;
+  height: 85%;
 }
 
 .pet-infos p {
@@ -204,6 +205,9 @@
 }
 
 .price-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   button {
     appearance: button;
     // background-color: #67AAF9;
@@ -231,7 +235,6 @@
     user-select: none;
     -webkit-user-select: none;
     vertical-align: middle;
-    white-space: nowrap;
     width: 90%;
     background-color: transparent;
   }
@@ -366,5 +369,50 @@
 @media screen and (max-width: 650px) {
   .center-btns {
     flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 780px) {
+  .adoption-details {
+    width: calc(40% - 40px);
+  }
+
+  .pet-details {
+    width: calc(60% - 40px);
+  }
+
+  .adoption-details-map {
+    background-color: #DDE7F9;
+    color: #5E6771;
+    margin: 20px;
+    border-radius: 30px;
+    display: flex;
+    padding: 30px;
+    width: calc(40% - 40px);
+    height: 500px;
+    overflow-y: scroll;
+    flex: 1 1 0;
+    align-items: stretch;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .pet-details-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .pet-user-description {
+    overflow-y: scroll;
+  }
+
+  .adoption-form {
+    width: 100%;
+  }
+
+  .adoption-details-map {
+    width: 90%;
   }
 }
