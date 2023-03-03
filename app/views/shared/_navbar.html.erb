@@ -1,64 +1,60 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <%= link_to root_path, class: "navbar-brand" do %>
-      <%= image_tag "logo-no-text.png", class: "logo" %>
-    <% end %>
-    <%# title/tag below just placeholders for now %>
-    <% unless params[:action] == "home" %>
-    <div class="title-navbar">
-      <h1>4DOPTION</h1>
-        <p>adopt your new best friend</p>
+    <div class="navbar-left">
+      <%= link_to root_path, class: "navbar-brand" do %>
+        <%= image_tag "logo-no-text.png", class: "logo" %>
+      <% end %>
     </div>
-    <% end %>
-
+    <%# title/tag below just placeholders for now %>
+    <div class="navbar-center">
+      <% unless params[:action] == "home" %>
+      <div class="title-navbar">
+        <h1>4DOPTION</h1>
+          <p>adopt your new best friend</p>
+      </div>
+      <% end %>
+    </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto">
-        <% if user_signed_in? %>
-          <li class="nav-item active">
-            <%= link_to "Home", root_path, class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Browse pets", pets_path, class: "nav-link" %>
-          </li>
-          <li class="nav-item dropdown">
-             <% if current_user.photo.attached? %>
-                <%=cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false  %>
-              <% else %>
-                <%= image_tag "default-user-icon.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-
-              <% end %>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "My Profile", user_path(current_user), class: "dropdown-item" %>
-              <%= link_to "Applications", applications_path, class: "dropdown-item" %>
-              <%# <% if current_user.applications.count > 0 %>
-                <%# <%= link_to "Messages", application_path(current_user.applications.first), class: "dropdown-item" %>
-              <%# <% elsif current_user.pets.count > 0 && current_user.pets.first.applications.where(approved: true).count > 0 %>
-                <%# <%= link_to "Messages", application_path(current_user.pets.first.applications.where(approved: true).first), class: "dropdown-item" %>
-              <%# <% else %>
-                <%# <%= link_to "Messages", "#", class: "dropdown-item" %>
-              <%# <% end %>
-              <%= link_to "Favourites", favourites_path, class: "dropdown-item" %>
-              <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
-            </div>
-          </li>
-        <% else %>
-          <li class="nav-item">
-            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-          </li>
-        <% end %>
-          <% if current_user && current_user.message_count.positive? %>
-            <li class="message">
-              <%= current_user.message_count %>
+    <div class="navbar-right">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto">
+          <% if user_signed_in? %>
+            <li class="nav-item active">
+              <%= link_to "Home", root_path, class: "nav-link" %>
             </li>
+            <li class="nav-item">
+              <%= link_to "Pets", pets_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item dropdown">
+              <% if current_user.photo.attached? %>
+                  <%=cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false  %>
+                <% else %>
+                  <%= image_tag "default-user-icon.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
 
+                <% end %>
+              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <%= link_to "My Profile", user_path(current_user), class: "dropdown-item" %>
+                <%= link_to "Applications", applications_path, class: "dropdown-item" %>
+                <%= link_to "Favourites", favourites_path, class: "dropdown-item" %>
+                <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
+              </div>
+            </li>
+          <% else %>
+            <li class="nav-item">
+              <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+            </li>
           <% end %>
-        </ul>
+            <% if current_user && current_user.message_count.positive? %>
+              <li class="message">
+                <%= current_user.message_count %>
+              </li>
 
-      <%# <% raise %>
+            <% end %>
+          </ul>
+      </div>
     </div>
   </div>
 </div>
