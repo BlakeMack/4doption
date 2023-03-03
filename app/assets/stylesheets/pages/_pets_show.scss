@@ -373,6 +373,10 @@
 }
 
 @media screen and (min-width: 780px) {
+  .pet-user-description {
+    overflow-y: scroll;
+  }
+
   .adoption-details {
     width: calc(40% - 40px);
   }
@@ -402,10 +406,6 @@
     align-items: center;
     justify-content: center;
     padding: 20px;
-  }
-
-  .pet-user-description {
-    overflow-y: scroll;
   }
 
   .adoption-form {
