@@ -7,6 +7,22 @@
   z-index: 10;
 }
 
+.navbar-right {
+  flex: 1;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.navbar-center {
+  flex-grow: 3;
+  text-align: center;
+}
+
+.navbar-left {
+  flex: 1;
+}
+
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
@@ -21,7 +37,6 @@
   border-radius: 30px;
   opacity: 0.9;
 }
-
 
 .nav-item {
   line-height: 50px;
