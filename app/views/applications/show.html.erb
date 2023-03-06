@@ -6,7 +6,7 @@
 <div  align="center">
   <div class="main-container">
     <br>
-      <div class="main-show-details">
+      <div class="applications-show-details">
         <div class="text-body">
         <div class="user-details-container">
             <div class="user-details-app">
@@ -17,9 +17,9 @@
                   <th scope="row"></th>
                     <div align="center">
                   <%if @application.pet.photo.attached? %>
-                          <%= cl_image_tag @application.pet.photo.key, class: "img" %>
+                          <%= cl_image_tag @application.pet.photo.key, class: "application-img" %>
                       <% else %>
-                          <%= image_tag "#{@application.pet.species.downcase}.jpg", class: "img" %>
+                          <%= image_tag "#{@application.pet.species.downcase}.jpg", class: "application-img" %>
                     <% end %>
                     </div>
                 </tr>
@@ -97,12 +97,12 @@
           </div>
           <% if @application.user == current_user && @application.approved === false %>
                     <ul class="list-group">
-                        <div class="row">
+                        <div class="application-buttons">
                             <%= link_to "Delete application", application_path(@application) ,  data: {turbo_method: :delete, turbo_confirm: "Are you sure?", turbo: true}, :class => "delete-fav-btn cancel-btn-red app-show-btn", notice: "your application has been cancelled" %>
-                            <%= link_to "Edit your application here", edit_pet_application_path(@application.pet, @application), :class => "delete-fav-btn review-btn-green app-show-btn" %>
+                            <%= link_to "Edit your application", edit_pet_application_path(@application.pet, @application), :class => "delete-fav-btn review-btn-green app-show-btn" %>
                             <%= link_to "See All Of Your Applications", applications_path, :class => "delete-fav-btn app-show-btn" %>
                             <br>
-                          </div>
+                        </div>
                     </ul>
                   </div>
           <% elsif @application.user == current_user && @application.approved %>
