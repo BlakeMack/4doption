@@ -164,7 +164,6 @@
   height: 550px;
   width: 260px;
   border-radius: calc(var(--curve) * 1px);
-  overflow: auto;
   text-decoration: none;
   border-radius: 5%;
   box-shadow: 1px 1px 10px #c2d7d7;
@@ -176,7 +175,7 @@
 .app-card-img-top {
   text-decoration: none;
   height: 300px;
-  width: 300px;
+  width: 100%;
   object-fit: cover;
   color: #222934;
   padding: 0;
@@ -212,9 +211,7 @@
 .my-pet-card {
   position: relative;
   display: block;
-  height: 500px;
   border-radius: calc(var(--curve) * 1px);
-  overflow: auto;
   text-decoration: none;
   border-radius: 5%;
   box-shadow: 1px 1px 10px #c2d7d7;
@@ -284,7 +281,6 @@
   height: 220px;
   width: 220px;
   border-radius: calc(var(--curve) * 1px);
-  overflow: auto;
   text-decoration: none;
   border-radius: 5%;
   box-shadow: 1px 1px 10px #c2d7d7;
@@ -417,36 +413,7 @@
   flex-wrap: wrap;
 }
 
-.delete-fav-btn {
-  appearance: button;
-  background-color: #119D9D;
-  border: solid #1BD1CC;
-  border-radius: 16px;
-  border-width: 0 0 4px;
-  box-sizing: border-box;
-  color: #FFFFFF !important;
-  cursor: pointer;
-  display: inline-block;
-  font-family: din-round, sans-serif;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: .8px;
-  line-height: 20px;
-  margin: 20px 20px 15px 20px;
-  outline: none;
-  overflow: visible;
-  padding: 10px 10px;
-  text-align: center;
-  text-transform: uppercase;
-  touch-action: manipulation;
-  transform: translateZ(0);
-  transition: filter .2s;
-  user-select: none;
-  -webkit-user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
-//  width: 70%;
-}
+
 
 .review-btn-green {
   background-color: #9DE18C !important;

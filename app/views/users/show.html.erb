@@ -18,7 +18,7 @@
                                       <div class="row">
                                         <div align="center">
                                           <% @user.pets.each do |pet| %>
-                                            <div class="col-md-3 my-3 landing-page-card">
+                                            <div class="my-3 landing-page-card">
                                               <%= link_to pet_path(pet) do%>
                                                 <div class="my-pet-card">
                                                   <% if pet.photo.attached? %>
@@ -108,7 +108,7 @@
                                 <div class="row">
                                       <% @pets.each do | pet | %>
                                         <% pet.applications.each do |pet_app| %>
-                                        <div class="col-md-3 my-3 landing-page-card">
+                                        <div class="col-md-4 my-3 landing-page-card">
                                           <%= link_to pet_path(pet_app.pet) do%>
                                             <div class="app-card my-10">
                                               <% if pet_app.pet.photo.attached? %>
