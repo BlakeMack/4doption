@@ -159,17 +159,13 @@
 // }
 
 .app-card {
-  position: relative;
   display: block;
-  height: 550px;
-  width: 260px;
   border-radius: calc(var(--curve) * 1px);
   text-decoration: none;
   border-radius: 5%;
   box-shadow: 1px 1px 10px #c2d7d7;
   background-color: #DDE7F9;
   opacity: 0.9;
-  margin: 10px;
 }
 
 .app-card-img-top {
@@ -192,10 +188,6 @@
 
 .app-icon {
   width: 60px;
-  position: absolute;
-  left: 85px;
-  bottom: 200px;
-  margin: 20px;
 }
 
 .app-card-text {
@@ -278,8 +270,6 @@
 
 .favourite-card {
   display: block;
-  height: 220px;
-  width: 220px;
   border-radius: calc(var(--curve) * 1px);
   text-decoration: none;
   border-radius: 5%;
@@ -291,7 +281,7 @@
 }
 
 .favourite-img-top {
-  height: 100%;
+  height: 200px;
   width: 100%;
   object-fit: cover;
 }
@@ -384,10 +374,10 @@
   padding: 20px;
   text-decoration: none;
   overflow-y: scroll;
+  overflow-x: hidden;
   flex: 2 2 auto;
   align-items: stretch;
   flex-basis: auto;
-
 }
 
 .app-btn-ghost {

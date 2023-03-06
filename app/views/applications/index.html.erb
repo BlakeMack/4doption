@@ -10,7 +10,7 @@
                   <ul class="list-group mb-3">
                     <div class="row">
                       <% @applications.each do |application| %>
-                        <div class="col-md-3 my-3 landing-page-card">
+                        <div class="col-md-4 my-3 landing-page-card">
                           <%= link_to pet_path(application.pet) do%>
                             <div class="app-card">
                                 <% if application.pet.photo.attached? %>
