@@ -164,7 +164,6 @@
   height: 550px;
   width: 260px;
   border-radius: calc(var(--curve) * 1px);
-  overflow: auto;
   text-decoration: none;
   border-radius: 5%;
   box-shadow: 1px 1px 10px #c2d7d7;
@@ -176,7 +175,7 @@
 .app-card-img-top {
   text-decoration: none;
   height: 300px;
-  width: 300px;
+  width: 100%;
   object-fit: cover;
   color: #222934;
   padding: 0;
@@ -212,9 +211,7 @@
 .my-pet-card {
   position: relative;
   display: block;
-  height: 500px;
   border-radius: calc(var(--curve) * 1px);
-  overflow: auto;
   text-decoration: none;
   border-radius: 5%;
   box-shadow: 1px 1px 10px #c2d7d7;
@@ -284,7 +281,6 @@
   height: 220px;
   width: 220px;
   border-radius: calc(var(--curve) * 1px);
-  overflow: auto;
   text-decoration: none;
   border-radius: 5%;
   box-shadow: 1px 1px 10px #c2d7d7;
