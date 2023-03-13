@@ -1,9 +1,18 @@
+.filter-search-dropdown-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .filter {
-  margin-left: 16px;
   height: 58px;
   width: 85%;
   display: flex;
   align-items: flex-end;
+}
+
+.filter-button {
+  justify-content: center;
 }
 
 .formButton {
@@ -66,4 +75,13 @@
 
 .mg {
   margin: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+  .form {
+    flex-direction: column;
+  }
+  .filter {
+    height: auto;
+  }
 }
