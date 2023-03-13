@@ -255,7 +255,6 @@
 
 .my-pet-app-icon {
   height: 100px;
-  position: absolute;
   left: 95px;
   bottom: 150px;
 }
@@ -427,4 +426,10 @@
 .pet-show-app-icon {
   width: 60px;
   margin: 20px;
+}
+
+@media screen and (max-width: 576px) {
+  .my-pet-card-img-top {
+    width: 100%;
+  }
 }
