@@ -56,14 +56,13 @@
 
 .pet-show-name-header {
   font-weight: bold;
-  margin-left: 20px;
+  text-align: center;
   margin-top: 20px;
   color: #5E6771;
   font-size: 35px;
 }
 
 .pet-infos {
-  margin-left: 20px;
   margin-top: 20px;
   line-height: 0.5;
   overflow-y: scroll;
@@ -366,9 +365,19 @@
   justify-content: center;
 }
 
+.align-needs-garden-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media screen and (max-width: 650px) {
   .center-btns {
     flex-direction: column;
+  }
+
+  .pet-infos p {
+    text-align: center;
   }
 }
 
