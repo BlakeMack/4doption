@@ -161,3 +161,10 @@ a:hover {
 .cancel-btn-red {
   background-color:#E5827C !important ;
 }
+
+@media screen and (max-width: 576px) {
+  .carousel {
+    width: 75%;
+    margin: 0 auto;
+  }
+}

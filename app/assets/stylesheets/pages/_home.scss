@@ -8,6 +8,13 @@
   min-width: 100%;
   display: flex;
   align-items: center;
+  // new change
+  justify-content: center;
+  margin-top: -5px;
+}
+
+.banner-homepage .btn {
+  margin-right: 20px;
 }
 
 .title {
@@ -77,14 +84,6 @@
 // .landing-page-card .card-body {
 //   height: 138px;
 // }
-
-.banner-homepage .btn {
-  margin-right: 20px;
-}
-
-.banner-homepage {
-  margin-top: -5px;
-}
 
 .search-bar-btns {
   border: none;
@@ -156,4 +155,29 @@ h2, .h2 {
   font-size: large;
   padding: 20px;
   margin-bottom: 32px;
+}
+
+@media screen and (max-width: 576px) {
+  .banner-homepage {
+    margin-left: 0px;
+    text-align: center;
+    background-position: center;
+  }
+
+  .title {
+    margin-left: 0;
+  }
+
+  .title h1 {
+    font-size: 3rem;
+  }
+
+  .title p {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .search-bar-btns {
+    padding: 10px 25px;
+  }
 }
