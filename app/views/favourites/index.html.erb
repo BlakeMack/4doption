@@ -2,7 +2,7 @@
   <div class="sign-up-container">
     <div class="row">
       <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-        <h1>All Favourites</h1>
+        <h1 class="favourites-title">All Favourites</h1>
         <div class="list-group mb-3">
           <% @favourites.each do |fav| %>
             <div class="card-product justify-content-start">
@@ -16,7 +16,6 @@
               <div class="fav-list-group-item" >
                 <strong><%= fav.pet.name %></strong>
                 <p><%= fav.pet.location %></p>
-                <p><%= fav.pet.description %></p>
               <% end %>
                 <div class="delete-button" >
 
