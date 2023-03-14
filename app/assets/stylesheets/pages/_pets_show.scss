@@ -415,10 +415,17 @@
     align-items: center;
     justify-content: center;
     padding: 20px;
+    width: 100%;
+    flex-wrap: nowrap;
   }
 
   .adoption-form {
     width: 100%;
+  }
+
+  .adoption-details {
+    margin: 0;
+    height: auto;
   }
 
   .adoption-details-map {
